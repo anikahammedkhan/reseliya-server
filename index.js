@@ -18,6 +18,7 @@ async function run() {
     try {
         const categories = client.db("reseliya").collection("categories");
         const allProducts = client.db("reseliya").collection("allProducts");
+        const usersCollection = client.db("reseliya").collection("users");
 
         // load category data
         app.get('/categories', (req, res) => {
@@ -51,6 +52,22 @@ async function run() {
                     res.send(documents[0]);
                 })
         });
+
+        // save users data
+        app.post('/users', async (req, res) => {
+            const user = req.body;
+            const result = await usersCollection.insertOne(user);
+            res.send(result);
+        });
+
+        // get all user  
+        app.get('/users', (req, res) => {
+            usersCollection.find({})
+                .toArray((err, documents) => {
+                    res.send(documents);
+                })
+        });
+
     }
     catch (err) {
         console.log(err);
