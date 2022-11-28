@@ -10,9 +10,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Samsung Galaxy A32",
@@ -25,9 +27,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Nokia X30",
@@ -40,9 +44,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Xiaomi Redmi Note 12 Explorer",
@@ -55,9 +61,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Nokia 2.4",
@@ -70,9 +78,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Samsung Galaxy A23",
@@ -85,9 +95,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Apple iPhone 14",
@@ -100,9 +112,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Samsung Galaxy A52",
@@ -115,9 +129,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Apple iPhone 14 Plus",
@@ -130,9 +146,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Samsung Galaxy A72",
@@ -145,9 +163,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Xiaomi Redmi Note 12 Pro",
@@ -160,9 +180,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Realme GT 5G",
@@ -175,9 +197,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Xiaomi Redmi Note 12 Pro Max",
@@ -190,9 +214,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Xiaomi Redmi Note 12",
@@ -205,9 +231,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Xiaomi Redmi Note 12S",
@@ -220,9 +248,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Xiaomi Redmi Note 12T",
@@ -235,9 +265,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Apple iPhone 14 Pro",
@@ -250,9 +282,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Apple iPhone 13 Pro Max",
@@ -265,9 +299,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "OnePlus Nord 2T",
@@ -280,9 +316,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "OnePlus Nord N100",
@@ -295,9 +333,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "OnePlus Nord 2",
@@ -310,9 +350,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "OnePlus Nord CE 5G",
@@ -325,9 +367,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "OnePlus Nord N10 5G",
@@ -340,9 +384,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "OnePlus Nord N200 5G",
@@ -355,9 +401,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Realme GT Neo2T",
@@ -370,9 +418,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Realme GT Neo2",
@@ -385,9 +435,11 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     },
     {
         "name": "Realme GT Master Edition",
@@ -400,8 +452,10 @@
         "location": "Dhaka",
         "time": "2022-11-25",
         "seller_name": "Rakib",
+        "seller_email": "rakib@gmail.com",
         "seller_phone": "01700000000",
         "verified": true,
-        "years_used": 1
+        "years_used": 1,
+        "status": "available"
     }
 ]

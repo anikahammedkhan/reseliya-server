@@ -4,6 +4,7 @@ const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 5000;
+const stripe = require("stripe")(process.env.STRIPE_SECRET);
 
 
 app.use(express.json());
@@ -19,31 +20,34 @@ async function run() {
         const categories = client.db("reseliya").collection("categories");
         const allProducts = client.db("reseliya").collection("allProducts");
         const usersCollection = client.db("reseliya").collection("users");
+        const bookingCollection = client.db("reseliya").collection("bookings");
+        const paymentsCollection = client.db("reseliya").collection("payments");
 
-        // load category data
+        // load all category data
         app.get('/categories', (req, res) => {
-            categories.find({})
-                .toArray((err, documents) => {
-                    res.send(documents);
+            categories.find()
+                .toArray((err, items) => {
+                    res.send(items);
                 })
         })
 
-        // all Products 
+        // all Products data and status available
         app.get('/products', (req, res) => {
-            allProducts.find({})
-                .toArray((err, documents) => {
-                    res.send(documents);
+            allProducts.find({ status: 'available' })
+                .toArray((err, items) => {
+                    res.send(items);
                 })
         });
 
-        // get product by brand 
+        // get prodduct by brand and status available
         app.get('/products/:brand', (req, res) => {
-            const brand = req.params.brand;
-            allProducts.find({ brand: brand })
-                .toArray((err, documents) => {
-                    res.send(documents);
+            allProducts.find({ brand: req.params.brand, status: 'available' })
+                .toArray((err, items) => {
+                    res.send(items);
                 })
         });
+
+
         // get single product by _id 
         app.get('/product/:id', (req, res) => {
             const id = req.params.id;
@@ -52,11 +56,43 @@ async function run() {
                     res.send(documents[0]);
                 })
         });
+        // update product by _id from body data
+        app.patch('/product/:id', (req, res) => {
+            const id = req.params.id;
+            const product = req.body;
+            allProducts.updateOne({ _id: ObjectId(id) }, {
+                $set: { ...product }
+            })
+                .then(result => {
+                    res.send(result.modifiedCount > 0);
+                })
+        });
 
-        // save users data
-        app.post('/users', async (req, res) => {
+        // get all product by seller_email
+        app.get('/products/seller/:email', (req, res) => {
+            const email = req.params.email;
+            allProducts.find({ seller_email: email })
+                .toArray((err, documents) => {
+                    res.send(documents);
+                })
+        });
+
+        // post bookings data
+        app.post('/bookings', (req, res) => {
+            const newBooking = req.body;
+            bookingCollection.insertOne(newBooking)
+                .then(result => {
+                    res.send(result);
+                })
+        });
+
+
+
+        // save users data and replace if already exist
+        app.put('/users', async (req, res) => {
             const user = req.body;
-            const result = await usersCollection.insertOne(user);
+            const email = user.email;
+            const result = await usersCollection.replaceOne({ email: email }, user, { upsert: true });
             res.send(result);
         });
 
@@ -66,6 +102,67 @@ async function run() {
                 .toArray((err, documents) => {
                     res.send(documents);
                 })
+        });
+
+        // get order by email 
+        app.get('/orders/:email', (req, res) => {
+            const email = req.params.email;
+            bookingCollection.find({
+                buyerEmail
+                    : email
+            })
+                .toArray((err, documents) => {
+                    res.send(documents);
+                })
+        });
+        // get single order by _id 
+        app.get('/order/:id', (req, res) => {
+            const id = req.params.id;
+            bookingCollection.find({ _id: ObjectId(id) })
+                .toArray((err, documents) => {
+                    res.send(documents[0]);
+                })
+        });
+
+        // delete order by _id
+        app.delete('/orders/:id', (req, res) => {
+            const id = req.params.id;
+            console.log(id);
+            bookingCollection.deleteOne({ _id: ObjectId(id) })
+                .then(result => {
+                    console.log(result);
+                    res.send(result);
+                })
+        });
+
+
+        // payment gateway
+        app.post('/create-payment-intent', async (req, res) => {
+            const booking = req.body;
+            const price = booking.productPrice;
+            const amount = price * 100;
+            const paymentIntent = await stripe.paymentIntents.create({
+                amount,
+                currency: 'usd',
+                "payment_method_types": ["card"],
+            });
+            res.json({
+                clientSecret: paymentIntent.client_secret,
+            });
+        });
+
+        // save payment data
+        app.post('/payments', (req, res) => {
+            const payment = req.body;
+            console.log(payment);
+            paymentsCollection.insertOne(payment)
+                .then(result => {
+                    res.send(result);
+                })
+            const id = payment._id;
+            const filter = { _id: ObjectId(id) };
+            const update = { $set: { payment: true, transactionId: payment.transactionId } };
+            const updateResult = bookingCollection.updateOne(filter, update);
         });
 
     }
