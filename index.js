@@ -144,6 +144,16 @@ async function run() {
                     res.send(result);
                 })
         });
+        // get odrer by seller email 
+        app.get('/mybuyer/:email', (req, res) => {
+            const email = req.params.email;
+            bookingCollection.find({
+                sellerEmail: email
+            })
+                .toArray((err, documents) => {
+                    res.send(documents);
+                })
+        });
 
 
         // payment gateway
