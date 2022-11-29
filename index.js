@@ -77,6 +77,16 @@ async function run() {
                 })
         });
 
+
+        // add product at allProducts collection 
+        app.post('/addProduct', (req, res) => {
+            const product = req.body;
+            allProducts.insertOne(product)
+                .then(result => {
+                    res.send(result);
+                })
+        });
+
         // post bookings data
         app.post('/bookings', (req, res) => {
             const newBooking = req.body;
@@ -157,12 +167,12 @@ async function run() {
             console.log(payment);
             paymentsCollection.insertOne(payment)
                 .then(result => {
+                    const id = payment._id;
+                    const filter = { _id: ObjectId(id) };
+                    const update = { $set: { payment: true, transactionId: payment.transactionId } };
+                    const updateResult = bookingCollection.updateOne(filter, update);
                     res.send(result);
                 })
-            const id = payment._id;
-            const filter = { _id: ObjectId(id) };
-            const update = { $set: { payment: true, transactionId: payment.transactionId } };
-            const updateResult = bookingCollection.updateOne(filter, update);
         });
 
     }
