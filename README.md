@@ -4,16 +4,16 @@
 
 ### Server Repo Link: https://github.com/programming-hero-web-course-4/b612-used-products-resale-server-side-anikahammedkhan
 
-### Live Website Link : 
+### Live Website Link : https://reseliya.web.app/
 
-### Live Server Link : 
+### Live Server Link : https://reseliya-server.vercel.app
 
 ### Admin Details:  
             user : anik1105@gmail.com  pass: anik1105
 
 # Project Details:
 
-Reseliya is a resale website where users can post there used product and seller can book product from here. Stripe payment gatway added to make payment. There are many special feature added to user / buyer / admin. 
+Reseliya is a resale website where users can post there used product and seller can book product from here. Stripe payment gateway added to make payment. There are many special feature added to user / buyer / admin. 
 
 ### Frameworks and Libraries: 
 
