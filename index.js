@@ -114,6 +114,17 @@ async function run() {
                 })
         });
 
+        // get user by email 
+        app.get('/user/:email', (req, res) => {
+            const email = req.params.email;
+            usersCollection.find({
+                email: email
+            })
+                .toArray((err, documents) => {
+                    res.json(documents[0]);
+                })
+        });
+
         // get user by role from users collection 
         app.get('/users/:role', (req, res) => {
             const role = req.params.role;
