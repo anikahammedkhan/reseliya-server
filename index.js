@@ -114,6 +114,15 @@ async function run() {
                 })
         });
 
+        // get user by role from users collection 
+        app.get('/users/:role', (req, res) => {
+            const role = req.params.role;
+            usersCollection.find({ role })
+                .toArray((err, documents) => {
+                    res.send(documents);
+                })
+        });
+
         // get order by email 
         app.get('/orders/:email', (req, res) => {
             const email = req.params.email;
