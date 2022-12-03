@@ -1,8 +1,8 @@
 # Project Name : Reseliya [ Used Product Selling/Buying Site ]
 
-### Github Repo Link : https://github.com/programming-hero-web-course-4/b612-used-products-resale-clients-side-anikahammedkhan
+### Github Repo Link : https://github.com/anikahammedkhan/reseliya-client
 
-### Server Repo Link: https://github.com/programming-hero-web-course-4/b612-used-products-resale-server-side-anikahammedkhan
+### Server Repo Link: https://github.com/anikahammedkhan/reseliya-server
 
 ### Live Website Link : https://reseliya.web.app/
 
